@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Freelancers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Bio</th>
+      <th>Userpic</th>
+      <th>Picture</th>
+      <th>User</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @freelancers.each do |freelancer| %>
+      <tr>
+        <td><%= freelancer.first_name %></td>
+        <td><%= freelancer.last_name %></td>
+        <td><%= freelancer.bio %></td>
+        <td><%= freelancer.userpic %></td>
+        <td><%= freelancer.picture %></td>
+        <td><%= freelancer.user_id %></td>
+        <td><%= freelancer.location %></td>
+        <td><%= link_to 'Show', freelancer %></td>
+        <td><%= link_to 'Edit', edit_freelancer_path(freelancer) %></td>
+        <td><%= link_to 'Destroy', freelancer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Freelancer', new_freelancer_path %>
