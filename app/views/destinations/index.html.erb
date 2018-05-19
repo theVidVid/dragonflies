@@ -2,9 +2,9 @@
 
 <h1 class="header">Destinations</h1>
 
-<div class="container justify-content-center">
+<div class="container justify-content-center mt-5">
   <table class="table table-striped container justify-content-center">
-    <thead>
+    <thead class="thead-dark">
       <tr>
         <th>Title</th>
         <th>Description</th>
@@ -16,9 +16,9 @@
     <tbody>
       <% @destinations.each do |destination| %>
         <tr>
-          <td><%= destination.title %></td>
-          <td><%= destination.description %></td>
-          <td><%= destination.country %></td>
+          <th><%= destination.title %></th>
+          <th><%= destination.description %></th>
+          <th><%= destination.country %></th>
           <td><a class="badge badge-success" <%= link_to 'Show', destination %></td>
           <td><a class="badge badge-warning" <%= link_to 'Edit', edit_destination_path(destination) %></td>
           <td><a class="badge badge-danger" <%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,5 +28,5 @@
   </table>
 </div>
 <br>
-<div class="destination"><%= link_to 'New Destination', new_destination_path %></div>
+<div class="destination"><button type="button" class="btn btn-success"><%= link_to 'New Destination', new_destination_path %></button></div>
 
