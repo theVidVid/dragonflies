@@ -1,31 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Destinations</h1>
+<h1 class="header">Destinations</h1>
 
-<table class="justify-content-center">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Country</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @destinations.each do |destination| %>
+<div class="container justify-content-center">
+  <table class="table table-striped container justify-content-center">
+    <thead>
       <tr>
-        <td><%= destination.title %></td>
-        <td><%= destination.description %></td>
-        <td><%= destination.country %></td>
-        <td><%= link_to 'Show', destination %></td>
-        <td><%= link_to 'Edit', edit_destination_path(destination) %></td>
-        <td><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Country</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @destinations.each do |destination| %>
+        <tr>
+          <td><%= destination.title %></td>
+          <td><%= destination.description %></td>
+          <td><%= destination.country %></td>
+          <td><%= link_to 'Show', destination %></td>
+          <td><%= link_to 'Edit', edit_destination_path(destination) %></td>
+          <td><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
+<div class="destination"><%= link_to 'New Destination', new_destination_path %></div>
 
-<%= link_to 'New Destination', new_destination_path %>
