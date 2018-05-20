@@ -1,0 +1,135 @@
+html {
+	height: 100vh;
+	width: 100vw;
+}
+
+#destination-picture {
+	height: 500px;
+	width: 100vw;
+	position: relative;
+	bottom: 125px;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border: thin;
+	border-bottom: thick;
+	border-color: black;
+	border-style: solid;
+}
+
+#location-info {
+	position: absolute;
+	top: 30px;
+	left: 41%;
+}
+
+#city {
+	font-size: 30px;
+	color: black;
+	display: inline-block;
+}
+
+#country {
+	font-size: 30px;
+	color: black;
+	display: inline-block;
+	bottom: 60px;
+	left: 180px;
+}
+
+#description {
+	font-size: 15px;
+	display: block;
+	color: black;
+	position: relative;
+	left: 28.5px;	
+}
+
+#first-group {
+	display: block;
+	position: relative;
+	bottom: 125px;
+}
+
+#searchresult-1 {
+	border: thin;
+	border-color: black;
+	border-style: solid;
+	display: inline-grid;
+	height: 550px;
+	width: 50%;
+
+}
+
+#searchresult-2 {
+	border: thin;
+	border-color: black;
+	border-style: solid;
+	float: right;
+	display: grid;
+	height: 550px;
+	width: 50%;
+}
+
+#second-group {
+	display: block;
+	position: relative;
+	bottom: 125px;
+}
+
+#searchresult-3 {
+	border: thin;
+	border-color: black;
+	border-style: solid;
+	display: inline-grid;
+	height: 550px;
+	width: 50%;
+}
+
+#searchresult-4 {
+	border: thin;
+	border-color: black;
+	border-style: solid;
+	float: right;
+	display: grid;
+	height: 550px;
+	width: 50%;
+}
+
+#photog-name1 {
+	
+	position: relative;
+	top: 65%;
+	left: 45%;
+}
+
+#photog-name2 {
+	position: relative;
+	top: 65%;
+	left: 45%;	
+}
+
+#photog-name3 {
+	position: relative;
+	top: 65%;
+	left: 45%;	
+}
+
+#photog-name4 {
+	position: relative;
+	top: 65%;
+	left: 45%;
+}
+
+a {
+	text-decoration: none;
+	text-decoration-style: none;
+}
+
+#edit-and-back {
+	position: relative;
+	color: black;
+	left: 46.5%;
+	bottom: 75px;
+
+}
