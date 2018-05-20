@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<%= stylesheet_link_tag "destinations" %>
-</head>
-<body>
-
-	<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
 <div><%= image_tag(@destination.picture, id: 'destination-picture') %>
 		<div id= "location-info">
@@ -20,6 +12,9 @@
 	  <!-- <strong>Country:</strong> -->
 	  <%= @destination.country %>
 	</p>
+
+<div><img src='<%= @destination.picture %>'class="img-fluid. max-width: 100%" height: auto; alt="Responsive image"></div>
+
 
 	<p id="description">
 	  <!-- <strong>Description:</strong> -->
@@ -54,5 +49,3 @@
 
 <div id = "edit-and-back"><h4><%= link_to 'Edit', edit_destination_path(@destination) %> |
 <%= link_to 'Back', destinations_path %></h4></div>
-</body>
-</html>
