@@ -4,4 +4,5 @@ class ApplicationController < ActionController::Base
         request.env['omniauth.origin'] || root_path
     end
 
+
 end
