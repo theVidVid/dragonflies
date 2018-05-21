@@ -1,51 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<div><%= image_tag(@destination.picture, id: 'destination-picture') %>
-		<div id= "location-info">
-
-	<p id= "city">
-	  <!-- <strong>Title:</strong> -->
-	  <%= @destination.title + "," %>
-	</p>
-
-	<p id="country">
-	  <!-- <strong>Country:</strong> -->
-	  <%= @destination.country %>
-	</p>
-
-<div><img src='<%= @destination.picture %>'class="img-fluid. max-width: 100%" height: auto; alt="Responsive image"></div>
-
-
-	<p id="description">
-	  <!-- <strong>Description:</strong> -->
-	  <%= @destination.description %>
-	</p>
-
-		</div>
-
+<div class="container justify-content-center mt-5">
+  <div class="row col-12-sm text-center">
+      <div class="card" style="width: 72rem;">
+        <img class="card-img-top" src="<%= @destination.picture %>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title card-dark"><%= @destination.title %> </h5>
+          <p class="card-text"><%= @destination.description %></p>
+        </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%= @destination.country %></li>
+        </ul>
+      </div>
+  </div>
 </div>
-
-<div id="first-group">
-<div id="searchresult-1">
-	<div id="photog-name1"><h4>Name</h4></div>
-</div>
-
-<div id="searchresult-2">
-	<div id="photog-name2"><h4>Name</h4></div>
-</div>
-
-</div>
-
-<div id="second-group">
-<div id="searchresult-3">
-	<div id="photog-name3"><h4>Name</div>
-</div>
-
-<div id="searchresult-4">
-	<div id="photog-name4"><h4>Name</h4></div>
-</div>
-
-</div>
-
-<div id = "edit-and-back"><h4><%= link_to 'Edit', edit_destination_path(@destination) %> |
-<%= link_to 'Back', destinations_path %></h4></div>
+<%= link_to 'Edit', edit_destination_path(@destination) %> |
+<%= link_to 'Back', destination_path %>
