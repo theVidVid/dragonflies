@@ -10,6 +10,7 @@ class FreelancersController < ApplicationController
   # GET /freelancers/1
   # GET /freelancers/1.json
   def show
+  
   end
 
   # GET /freelancers/new

@@ -5,7 +5,7 @@
   </button>
     <div class="collapse navbar-collapse justify-content-end">
         <form class="form-inline mt-4">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search_location">
             <button class="btn btn-success my-4 my-sm-0" type="submit">Search</button>
         </form>
     </div>
@@ -14,12 +14,21 @@
             <li class="nav-item active">
                 <h6><a class="nav-link mb-6" href="#">Home <span class="sr-only">(current)</span></a></h6>
             </li>
+            <% if user_signed_in? %>
             <li class="nav-item">
-                <h6><a class="nav-link mb-6" href="#">Sign-Up</a></h6>
+                <h6><a class="nav-link mb-6" href="/freelancers/<%= current_user.freelancer.id %>">Profile</a></h6>
             </li>
             <li class="nav-item">
-                <h6><a class="nav-link mb-6" href="#">Login</a></h6>
+                <h6><%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "nav-link mb-6" %></h6>
             </li>
+            <% else %>
+            <li class="nav-item">
+                <h6><a class="nav-link mb-6" href="/users/sign_up">Sign-Up</a></h6>
+            </li>
+            <li class="nav-item">
+                <h6><a class="nav-link mb-6" href="/users/sign_in">Login</a></h6>
+            </li>
+            <% end %>
         </ul>
     </div>
 </nav>
