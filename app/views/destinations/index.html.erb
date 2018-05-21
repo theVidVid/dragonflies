@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<div>
+  <p class="alert alert-success" id="notice" role="alert"><%= notice %></p>
+</div>
 
 <h1 class="header">Destinations</h1>
 
@@ -6,7 +8,7 @@
   <table class="table table-striped container justify-content-center">
     <thead class="thead-dark">
       <tr>
-        <th>Title</th>
+        <th>City</th>
         <th>Description</th>
         <th>Country</th>
         <th colspan="3"></th>
@@ -30,3 +32,18 @@
 <br>
 <div class="destination"><button type="button" class="btn btn-success"><%= link_to 'New Destination', new_destination_path %></button></div>
 
+<% @destinations.each_slice(3).each do |group| %>
+  <% group.each do |destination| %>
+    <div class="card col-3 text-center">
+      <h5 class="card-header"><%= destination.title %></h5>
+      <div class="card-body">
+        <h5 class="card-title"><%= destination.description %></h5>
+        <p class="card-text"><%= destination.country %></p>
+        <button class="btn btn-primary btn-sm"><%= link_to 'Show', destination %></button>
+        <button class="btn btn-warning btn-sm"><%= link_to 'Edit', edit_destination_path(destination) %></button>
+        <button class="btn btn-danger btn-sm"><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+      </div>
+      <div class="destination"><button type="button" class="btn btn-success btn-sm"><%= link_to 'New Destination', new_destination_path %></button></div>
+    </div>
+  <% end %>
+<% end %>
