@@ -1,39 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @freelancer.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @freelancer.last_name %>
-</p>
-
-<p>
-  <strong>Bio:</strong>
-  <%= @freelancer.bio %>
-</p>
-
-<p>
-  <strong>Userpic:</strong>
-  <%= @freelancer.userpic %>
-</p>
-
-<p>
-  <strong>Picture:</strong>
-  <%= @freelancer.picture %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @freelancer.user_id %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @freelancer.location %>
-</p>
-
+<div class="container justify-content-center mt-5">
+  <div class="row col-12-sm text-center">
+      <div class="card" style="width: 72rem;">
+        <img class="card-img-top" src="<%= @freelancer.picture %>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title card-dark"><%= @freelancer.first_name %> <%= @freelancer.last_name %></h5>
+          <p class="card-text"><%= @freelancer.bio %></p>
+        </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%= @freelancer.location %></li>
+            <li class="list-group-item"><%= @freelancer.userpic %></li>
+        </ul>
+        <div class="card-body">
+          <a class="card-link"><%= link_to 'Show', @freelancer %></a>
+          <a class="card-link"><%= link_to 'Edit', edit_freelancer_path(@freelancer) %>
+          <a class="card-link"><%= link_to 'Destroy', @freelancer, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+  </div>
+</div>
 <%= link_to 'Edit', edit_freelancer_path(@freelancer) %> |
 <%= link_to 'Back', freelancers_path %>

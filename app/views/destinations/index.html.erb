@@ -5,12 +5,12 @@
 <h1 class="header">Destinations</h1>
 
 <div class="container justify-content-center mt-5">
-  <div class="row col-8-sm">
+  <div class="row col-12-sm text-center">
     <% @destinations.each do |destination| %>
-      <div class="card" style="width: 32rem;">
+      <div class="card" style="width: 35rem;">
         <img class="card-img-top" src=".../100px180/" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title"><%= destination.title %></h5>
+          <h5 class="card-title card-dark"><%= destination.title %></h5>
           <p class="card-text"><%= destination.description %></p>
           <aclass="btn btn-primary"><%= link_to 'Show', destination %></a>
         </div>

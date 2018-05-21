@@ -2,81 +2,27 @@
 
 <h1 class="header">Freelancers</h1>
 
-<div class="container-fluid justify-content-start mt-5">
-  <table class="table table-striped container">
-    <thead class="thead-dark" id="freelance">
-      <tr>
-        <th>First name</th>
-        <th>Last name</th>
-        <th>Bio</th>
-        <th>Userpic</th>
-        <th>Picture</th>
-        <th>User</th>
-        <th>Location</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @freelancers.each do |freelancer| %>
-        <tr>
-          <th><%= freelancer.first_name %></th>
-          <th><%= freelancer.last_name %></th>
-          <th><%= freelancer.bio %></th>
-          <th><%= freelancer.userpic %></th>
-          <th><%= freelancer.picture %></th>
-          <th><%= freelancer.user_id %></th>
-          <th><%= freelancer.location %></th>
-          <th><a class="badge badge-success" <%= link_to 'Show', freelancer %></th>
-          <th><a class="badge badge-warning" <%= link_to 'Edit', edit_freelancer_path(freelancer) %></th>
-          <th><a class="badge badge-danger"<%= link_to 'Destroy', freelancer, method: :delete, data: { confirm: 'Are you sure?' } %></th>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
-<br>
-
-<div class="freelancer"><button type="button" class="btn btn-success"><%= link_to 'New Freelancer', new_freelancer_path %></button></div>
-
-<% @freelancers.each do |freelancer| %>
-  <div class="row">
-      <div class="col-md-3"><%= freelancer.first_name %></div>
-      <div class="col-md-3"><%= freelancer.last_name %></div>
-      <div class="col-md-3"><%= freelancer.bio %></div>
-      <div class="col-md-3"><%= freelancer.userpic %></div>
-      <div class="col-md-3"><%= freelancer.picture %></div>
-      <div class="col-md-3"><%= freelancer.user_id %></div>
-      <div class="col-md-3"><%= freelancer.location %></div>
-      <div class="col-md-3"><a class="badge badge-success" <%= link_to 'Show', freelancer %></div>
-      <div class="col-md-3"><a class="badge badge-warning" <%= link_to 'Edit', edit_freelancer_path(freelancer) %></div>
-      <div class="col-md-3"><a class="badge badge-danger" <%= link_to 'Destroy', freelancer, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-  </div>
-<% end %>
-
-<br>
-
-<div class="freelancer"><button type="button" class="btn btn-success"><%= link_to 'New Freelancer', new_freelancer_path %></button></div>
-
-<div class="container">
-  <div class="row">
-      <% @freelancers.each do |freelancer| %>
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" <%= freelancer.picture %> alt="Card image cap">
+<div class="container justify-content-center mt-5">
+  <div class="row col-12-sm text-center">
+    <% @freelancers.each do |freelancer| %>
+      <div class="card" style="width: 35rem;">
+        <img class="card-img-top" src="<%= freelancer.picture %>" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title"><%= freelancer.first_name %> <%= freelancer.last_name %></h5>
+          <h5 class="card-title card-dark"><%= freelancer.first_name %> <%= freelancer.last_name %></h5>
           <p class="card-text"><%= freelancer.bio %></p>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><%= freelancer.location %></li>
-          <li class="list-group-item"><%= freelancer.userpic %></li>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%= freelancer.location %></li>
+            <li class="list-group-item"><%= freelancer.userpic %></li>
         </ul>
         <div class="card-body">
           <a class="card-link"><%= link_to 'Show', freelancer %></a>
           <a class="card-link"><%= link_to 'Edit', edit_freelancer_path(freelancer) %>
           <a class="card-link"><%= link_to 'Destroy', freelancer, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
+
+<div class="freelancer"><button type="button" class="btn btn-success"><%= link_to 'New Freelancer', new_freelancer_path %></button></div>
