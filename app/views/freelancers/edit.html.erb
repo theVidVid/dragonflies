@@ -1,6 +1,8 @@
-<h1>Editing Freelancer</h1>
-
-<%= render 'form', freelancer: @freelancer %>
-
-<%= link_to 'Show', @freelancer %> |
-<%= link_to 'Back', freelancers_path %>
+<h1 class="header">Editing Freelancer</h1>
+<div class="form-group container col-2 mt-5">
+    <div class="row col-12-sm justify-content-center">
+        <%= render 'form', freelancer: @freelancer %>
+        <%= link_to 'Show', @freelancer %> |
+        <%= link_to 'Back', freelancers_path %>
+    </div>
+</div>
