@@ -1,5 +1,6 @@
-<p>Welcome <%= @email %>!</p>
-
-<p>You can confirm your account email through the link below:</p>
-
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<h1 class="header">Reset Password</h1>
+<div class="form-group container col-2 mt-5">
+    <p>Welcome <%= @email %>!</p>
+    <p>You can confirm your account email through the link below:</p>
+    <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+</div>
