@@ -5,6 +5,9 @@ class FreelancersController < ApplicationController
   # GET /freelancers.json
   def index
     @freelancers = Freelancer.all
+    @popular_places = Freelancer.group(:location).order('count_id DESC').limit(6).count(:id)
+    puts "test"
+    puts @popular_places
   end
 
   # GET /freelancers/1
