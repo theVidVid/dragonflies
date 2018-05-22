@@ -1,24 +1,44 @@
-<p id="notice"><%= notice %></p>
 
-<div class="container justify-content-center mt-5">
-  <div class="row col-12-sm text-center">
-      <div class="card" style="width: 72rem;">
-        <img class="card-img-top" src="<%= @freelancer.picture %>" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title card-dark"><%= @freelancer.first_name %> <%= @freelancer.last_name %></h5>
-          <p class="card-text"><%= @freelancer.bio %></p>
-        </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><%= @freelancer.location %></li>
-            <li class="list-group-item"><%= @freelancer.userpic %></li>
-        </ul>
-        <div class="card-body">
-          <a class="card-link"><%= link_to 'Show', @freelancer %></a>
-          <a class="card-link"><%= link_to 'Edit', edit_freelancer_path(@freelancer) %>
-          <a class="card-link"><%= link_to 'Destroy', @freelancer, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
-      </div>
+  <p id="notice"><%= notice %></p>
+
+  <div class="row col-12-s" id="freelancer-photog">
+  <!-- <strong>Picture:</strong> -->
+  <img src= '<%= @freelancer.picture %>' class="img-fluid" id="photog-image"></img> 
+</div>
+
+<div id="container">
+  <div id="freelancer-avatar">
+    <!-- <strong>Userpic:</strong> -->
+    <img src= '<%= @freelancer.userpic %>'id="userpic"></img>
   </div>
 </div>
-<%= link_to 'Edit', edit_freelancer_path(@freelancer) %> |
-<%= link_to 'Back', freelancers_path %>
+
+<div id="freelancer-name">
+  <h3>
+   <!--  <strong>First name:</strong> -->
+    <%= @freelancer.first_name %>
+  </h3>
+
+  <h3>
+    <!-- <strong>Last name:</strong> -->
+    <%= @freelancer.last_name %>
+  </h3>
+</div>
+
+<div id= "bio">
+  <h5 id="aboutme">About Me:</h5>
+
+  <h6>
+    <%= @freelancer.bio %>
+  </h6>
+</div>
+
+<div id="location">
+    <!-- <strong>Location:</strong> -->
+    <p id="location-font">
+    <%= @freelancer.location %>
+  </p>
+</div>
+
+<div id="edit"><p id="edit-text"><%= link_to 'Edit', edit_freelancer_path(@freelancer) %></p></div>
+<!--   | <%= link_to 'Back', freelancers_path %> -->
