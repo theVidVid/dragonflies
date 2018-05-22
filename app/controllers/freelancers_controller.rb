@@ -5,7 +5,7 @@ class FreelancersController < ApplicationController
   # GET /freelancers.json
   def index
     @freelancers = Freelancer.all
-    @popular_places = Freelancer.group(:location).order('count_id DESC').limit(6).count(:id)
+    
     if params[:search]
       @freelancers = Freelancer.search(params[:search]).order("created_at DESC")
     else
