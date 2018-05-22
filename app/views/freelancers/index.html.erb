@@ -4,25 +4,6 @@
 </div>
 <h1 class="header">Freelancers</h1>
 
-
-<h1 class="header">Find a photographer in your dream destination</h1>
-<div class="container justify-content-center mt-5">
-  <div class="row col-12-sm text-center">
-    <% @popular_places.keys.each do |destination| %>
-      <div class="card" style="width: 35rem;">
-        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title card-dark"><%= destination %></h5>
-          <a class="btn btn-primary" href="./locations/<%= destination %>"></a>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-
-
-<!-- previous code
 <div class="container justify-content-center mt-5" id="freelance-cards">
   <div class="row col-12-sm text-center">
     <% @freelancers.each do |freelancer| %>
@@ -38,12 +19,8 @@
         </ul>
         <div class="card-body">
           <a class="card-link"><%= link_to 'Show', freelancer %></a>
-          <a class="card-link"><%= link_to 'Edit', edit_freelancer_path(freelancer) %>
-          <a class="card-link"><%= link_to 'Destroy', freelancer, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-
-<div class="freelancer"><button type="button" class="btn btn-success"><%= link_to 'New Freelancer', new_freelancer_path %></button></div> -->
