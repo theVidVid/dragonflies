@@ -1,39 +1,43 @@
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @freelancer.first_name %>
-</p>
+  <div class="row col-12-s" id="freelancer-photog">
+  <!-- <strong>Picture:</strong> -->
+  <img src= '<%= @freelancer.picture %>' class="img-fluid" id="photog-image"></img> 
+</div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @freelancer.last_name %>
-</p>
+<div id="container">
+  <div id="freelancer-avatar">
+    <!-- <strong>Userpic:</strong> -->
+    <img src= '<%= @freelancer.userpic %>'id="userpic"></img>
+  </div>
+</div>
 
-<p>
-  <strong>Bio:</strong>
-  <%= @freelancer.bio %>
-</p>
+<div id="freelancer-name">
+  <h3>
+   <!--  <strong>First name:</strong> -->
+    <%= @freelancer.first_name %>
+  </h3>
 
-<p>
-  <strong>Userpic:</strong>
-  <%= @freelancer.userpic %>
-</p>
+  <h3>
+    <!-- <strong>Last name:</strong> -->
+    <%= @freelancer.last_name %>
+  </h3>
+</div>
 
-<p>
-  <strong>Picture:</strong>
-  <%= @freelancer.picture %>
-</p>
+<div id= "bio">
+  <h5 id="aboutme">About Me:</h5>
 
-<p>
-  <strong>User:</strong>
-  <%= @freelancer.user_id %>
-</p>
+  <h6>
+    <%= @freelancer.bio %>
+  </h6>
+</div>
 
-<p>
-  <strong>Location:</strong>
-  <%= @freelancer.location %>
-</p>
+<div id="location">
+    <!-- <strong>Location:</strong> -->
+    <p id="location-font">
+    <%= @freelancer.location %>
+  </p>
+</div>
 
-<%= link_to 'Edit', edit_freelancer_path(@freelancer) %> |
-<%= link_to 'Back', freelancers_path %>
+<div id="edit"><p id="edit-text"><%= link_to 'Edit', edit_freelancer_path(@freelancer) %></p></div>
+<!--   | <%= link_to 'Back', freelancers_path %> -->
