@@ -1,0 +1,27 @@
+#logo-name {
+	display: inline-block;
+}
+
+#logo {
+	display: inline-block;
+	position: relative;
+	bottom: -5px;
+	left: 10px;
+	height: 100px;
+	width: 100px;
+}
+
+#companyname {
+	display: inline-block;
+}
+
+#motto {
+	color: white;
+	position: relative;
+	top: 40px;
+	right: 23.5%;
+	display: block;
+}
+
+{
+}
