@@ -2,21 +2,19 @@
   <p class="alert alert-success" id="notice" role="alert"><%= notice %></p>
 </div>
 
-<h1 class="header">Destinations</h1>
+<h1 class="header">Photographers in <%= params[:location] %></h1>
 
 <div class="container justify-content-center mt-5">
   <div class="row col-12-sm text-center">
-    <% @destinations.each do |destination| %>
+    <% @freelancers_from_location.each do |freelancer| %>
       <div class="card" style="width: 35rem;">
         <img class="card-img-top" src=".../100px180/" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title card-dark"><%= destination.title %></h5>
-          <p class="card-text"><%= destination.description %></p>
-          <aclass="btn btn-primary"><%= link_to 'Show', destination %></a>
+          <h5 class="card-title card-dark"><%= freelancer.first_name %></h5>
+          <p class="card-text"></p>
+          <aclass="btn btn-primary"></a>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-
-<%= link_to 'New Destination', new_destination_path %>

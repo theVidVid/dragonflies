@@ -5,11 +5,24 @@ class FreelancersController < ApplicationController
   # GET /freelancers.json
   def index
     @freelancers = Freelancer.all
+    @popular_places = Freelancer.group(:location).order('count_id DESC').limit(6).count(:id)
+    if params[:search]
+      @freelancers = Freelancer.search(params[:search]).order("created_at DESC")
+    else
+      @freelancers = Freelancer.all.order("created_at DESC")
+    end
+    puts "test"
+    puts @popular_places
   end
 
   # GET /freelancers/1
   # GET /freelancers/1.json
   def show
+    if params[:search]
+      @freelancers = Freelancer.search(params[:search]).order("created_at DESC")
+    else
+      @freelancers = Freelancer.all.order("created_at DESC")
+    end
   end
 
   # GET /freelancers/new

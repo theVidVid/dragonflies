@@ -1,39 +1,43 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Freelancers</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Bio</th>
-      <th>Userpic</th>
-      <th>Picture</th>
-      <th>User</th>
-      <th>Location</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @freelancers.each do |freelancer| %>
-      <tr>
-        <td><%= freelancer.first_name %></td>
-        <td><%= freelancer.last_name %></td>
-        <td><%= freelancer.bio %></td>
-        <td><%= freelancer.userpic %></td>
-        <td><%= freelancer.picture %></td>
-        <td><%= freelancer.user_id %></td>
-        <td><%= freelancer.location %></td>
-        <td><%= link_to 'Show', freelancer %></td>
-        <td><%= link_to 'Edit', edit_freelancer_path(freelancer) %></td>
-        <td><%= link_to 'Destroy', freelancer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<h1 class="header">Find a photographer in your dream destination</h1>
+<div class="container justify-content-center mt-5">
+  <div class="row col-12-sm text-center">
+    <% @popular_places.keys.each do |destination| %>
+      <div class="card" style="width: 35rem;">
+        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title card-dark"><%= destination %></h5>
+          <a class="btn btn-primary" href="./locations/<%= destination %>"></a>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
 
-<br>
 
-<%= link_to 'New Freelancer', new_freelancer_path %>
+
+<!-- previous code
+<div class="container justify-content-center mt-5" id="freelance-cards">
+  <div class="row col-12-sm text-center">
+    <% @freelancers.each do |freelancer| %>
+      <div class="card" style="width: 35rem;">
+        <img class="card-img-top" src="<%= freelancer.picture %>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title card-dark"><%= freelancer.first_name %> <%= freelancer.last_name %></h5>
+          <p class="card-text"><%= freelancer.bio %></p>
+        </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%= freelancer.location %></li>
+            <li class="list-group-item"><%= freelancer.userpic %></li>
+        </ul>
+        <div class="card-body">
+          <a class="card-link"><%= link_to 'Show', freelancer %></a>
+          <a class="card-link"><%= link_to 'Edit', edit_freelancer_path(freelancer) %>
+          <a class="card-link"><%= link_to 'Destroy', freelancer, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="freelancer"><button type="button" class="btn btn-success"><%= link_to 'New Freelancer', new_freelancer_path %></button></div> -->

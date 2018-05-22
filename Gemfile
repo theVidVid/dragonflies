@@ -20,7 +20,9 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'omniauth-linkedin-oauth2'
 gem 'bootstrap'
+gem 'figaro'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -68,4 +70,3 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "autoprefixer-rails"
-gem "figaro"
