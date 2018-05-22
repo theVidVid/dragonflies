@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
-  before_action :authenticate_user!
 
   def index
+    @popular_places = Freelancer.group(:location).order('count_id DESC').limit(6).count(:id)
   end
 end

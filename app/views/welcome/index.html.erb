@@ -1,3 +1,18 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
-<h1>Hello, Rails!</h1>
+<div>
+  <p class="alert alert-success" id="notice" role="alert"><%= notice %></p>
+</div>
+
+<h1 class="header">Find a photographer in your dream destination</h1>
+<div class="container justify-content-center mt-5">
+  <div class="row col-12-sm text-center">
+    <% @popular_places.keys.each do |destination| %>
+      <div class="card" style="width: 35rem;">
+        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title card-dark"><%= destination %></h5>
+          <a class="btn btn-primary" href="./locations/<%= destination %>"></a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
