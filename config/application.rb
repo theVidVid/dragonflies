@@ -6,10 +6,6 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 1204a44727b42e6449f63e2c827cbb03e0dea922
 module Dragonflies
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
