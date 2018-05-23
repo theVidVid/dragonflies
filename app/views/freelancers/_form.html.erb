@@ -24,17 +24,17 @@
       </div>
 
       <div class="field">
-        <%= form.label :bio %>
-        <%= form.text_field :bio %>
+        <%= form.label :bio %><br>
+        <%= form.text_area :bio %>
       </div>
      
       <div class="field">
-        <%= form.label :userpic %>
+        <%= form.label :userpic %><br>
         <%= form.text_field :userpic %>
       </div>
 
       <div class="field">
-        <%= form.label :picture %>
+        <%= form.label :picture %><br>
         <%= form.text_field :picture %>
       </div>
 
@@ -44,8 +44,21 @@
       </div>
 
       <div class="field">
-        <%= form.label :genre %>
-        <%= form.text_field :genre %>
+        <%= form.label :genre %><br>
+        <%= form.text_area :genre %><br>      
+        <%= form.label :genre %><br>
+        <%= check_box_tag(:genre) %>
+        <%= label_tag(:genre, "Weddings") %>
+        <%= check_box_tag(:genre) %>
+        <%= label_tag(:genre, "Fashion") %><br>
+        <%= check_box_tag(:genre) %>
+        <%= label_tag(:genre, "Food Photography") %>
+        <%= check_box_tag(:genre) %>
+        <%= label_tag(:genre, "Portrait") %><br>
+        <%= check_box_tag(:genre) %>
+        <%= label_tag(:genre, "Family") %>
+        <%= check_box_tag(:genre) %>
+        <%= label_tag(:genre, "Live Music") %>                
       </div>       
 
       <div class="actions">
