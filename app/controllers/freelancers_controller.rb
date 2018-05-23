@@ -82,6 +82,6 @@ class FreelancersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def freelancer_params
-      params.require(:freelancer).permit(:first_name, :last_name, :bio, :userpic, :picture, :user_id, :location)
+      params.require(:freelancer).permit(:first_name, :last_name, :bio, :userpic, :picture, :user_id, :location, :genre)
     end
 end
