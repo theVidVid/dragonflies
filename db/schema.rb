@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2018_05_23_173008) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -37,6 +38,7 @@ ActiveRecord::Schema.define(version: 2018_05_23_173008) do
     t.string "destination"
     t.date "start_date"
     t.date "end_date"
+    t.string "genre"
   end
 
   create_table "users", force: :cascade do |t|
