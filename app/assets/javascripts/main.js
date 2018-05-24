@@ -1,6 +1,6 @@
 $(document).ready(function(){
-  var date_input_start=$('input[name="freelancer[start]"]'); //our date input has the name "date"
-  var date_input_end=$('input[name="freelancer[end]"]'); //our date input has the name "date"
+  var date_input_start=$('input[name="freelancer[start_date]"]'); //our date input has the name "date"
+  var date_input_end=$('input[name="freelancer[end_date]"]'); //our date input has the name "date"
   var container=$('.bootstrap-iso form') //.length>0 ? $('.bootstrap-iso form').parent()
   var options={
     format: 'mm/dd/yyyy',
@@ -10,6 +10,10 @@ $(document).ready(function(){
   };
   date_input_start.datepicker(options);
   date_input_end.datepicker(options);
+
+  
+
+
 })
 
 // var input = document.getElementById('freelancer_location');
