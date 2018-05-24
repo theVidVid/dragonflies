@@ -44,4 +44,51 @@
 </div>
 
 <div id="edit"><p id="edit-text"><%= link_to 'Edit', edit_freelancer_path(@freelancer) %></p></div>
+
 <!--   | <%= link_to 'Back', freelancers_path %> -->
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#travelModal">
+  Set Travel Options
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="travelModal" tabindex="-1" role="dialog" aria-labelledby="travelModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Set your travel here</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= form_with(model: @freelancer, local: true) do |form| %>
+
+      <div class="field">
+        <%= form.label :destination %>
+        <%= form.text_field :destination %>
+      </div>
+
+      <div class="field">
+        <%= form.label :start_date %>
+        <%= form.text_field :start_date %>
+      </div>
+
+      <div class="field">
+        <%= form.label :end_date %>
+        <%= form.text_field :end_date %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
