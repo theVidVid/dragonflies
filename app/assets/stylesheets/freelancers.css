@@ -1,9 +1,9 @@
 #container {
-	width: 100px;
+	width: 200px;
 }
 
 #freelance-photog {
-	height: 500px;
+	height: 750px;
 	width: 1500px;
 }
 
@@ -14,20 +14,29 @@
 
 #userpic {
 	height: 200px;
-	width: 200px;
+	width: 180px;
+	z-index: 1;
 }
 
 #freelancer-avatar {
 	position: relative;
 	bottom: 75px;
-	left: 26%;
+	left: 20%;
 }
-
+#jumbo {
+	position: relative;
+	margin: -18%;
+	margin-left: -1.25%;
+	width: 1145px;
+}
+#dumbo {
+	position:relative;
+}
 #freelancer-name {
 	display: inline-flex;
 	position: relative;
 	margin-top: 11%;
-	left: -7%;
+	left: -16%;
 	color: black;
 }
 
@@ -41,15 +50,15 @@
 
 #location-font {
 	font-size: 20px;
+	font-style: bold;
 }
 
 
 #bio {
 	display: block;
 	position: relative;
-	margin-left: 25%;
-	margin-bottom: 10%;
-
+	margin-left: 4%;
+	margin-top: 10%;
 }
 
 #edit {
@@ -58,18 +67,17 @@
 	bottom: 284.3px;
 }
 
-#edit-text {
-	font-size: 22px;
-}
+
 
 h3 {
 	margin: 3%;
+	font-style: bold;
 }
 
 h5 {
 	margin: 3%;
+	font-style: bold;
 }
 
-h6 {
 
-}  
+ 
