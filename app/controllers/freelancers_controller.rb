@@ -3,16 +3,21 @@ class FreelancersController < ApplicationController
 
   # GET /freelancers
   # GET /freelancers.json
+  #search pseudocode:
+  #   1. get all freelancers whose destination equals to search-location and within date range
+  #   2. get all freelancers whose location equals to search-location and destination is nill
+  #   3. get all freelancers whose location equals to search-location and destination is not nill outside date range
+  #   4. search just location if date input is empty
+
   def index
-    @freelancers = Freelancer.all
-    
-    if params[:search]
-      @freelancers = Freelancer.search(params[:search]).order("created_at DESC")
-    else
+    if params[:freelancer][:start].empty? && params[:freelancer][:end].empty?
+      @freelancers = Freelancer.where("location = :search",{search: params[:search]})
+    elsif params[:freelancer][:start].present? && params[:freelancer][:end].present?
+      @freelancers = Freelancer.where("(destination = :search AND start_date <= :start AND end_date >= :end) OR (location = :search AND destination IS NULL) OR (location = :search AND destination IS NOT NULL AND start_date >= :start AND end_date <= :end)",{search: params[:search], start: params[:freelancer][:start], end: params[:freelancer][:end]})
+    else 
       @freelancers = Freelancer.all.order("created_at DESC")
     end
-    puts "test"
-    puts @popular_places
+   
   end
 
   # GET /freelancers/1
