@@ -1,3 +1,26 @@
+.avatar img{
+	border-radius: 50%;
+	border: 5px solid rgba(255,255,255,0.5);
+	height: 90px;
+	width: 90px;
+}
+
+.avatar img{
+	position: relative;
+	top: -50px;
+	margin-bottom: -50px;
+}
+
+h1.header {
+	margin-top: 5rem;
+	margin-bottom: 4rem;
+}
+
+.card-img-top {
+    height: 15vw;
+    object-fit: cover;
+}
+
 #container {
 	width: 100px;
 }
