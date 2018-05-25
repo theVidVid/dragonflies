@@ -1,13 +1,15 @@
-<div class="navbar card text-center">
-  <div class="card-header">
-    Featured
-  </div>
+<div class="navbar card text-center bg-light">
   <div class="card-body">
     <h5 class="card-title">Travellancer</h5>
     <p class="card-text">Empowering the gig economy<br>Anywhere.</p>
-    <a href="#" class="btn btn-primary btn-sm">Go somewhere</a>
+    <% if user_signed_in? %>
+      
+      <% else %>
+        <a href="/users/sign_up" class="btn btn-primary btn-sm">Sign Up!</a>
+    <% end %>
+    
   </div>
-  <div class="card-footer text-muted">
-    All rights reserved.
+  <div class="card-footer text-dark">
+    All rights reserved. 2018
   </div>
 </div>

@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_22_233414) do
+
+ActiveRecord::Schema.define(version: 2018_05_23_173008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +35,10 @@ ActiveRecord::Schema.define(version: 2018_05_22_233414) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "destination"
+    t.date "start_date"
+    t.date "end_date"
+    t.string "genre"
   end
 
   create_table "mailboxer_conversation_opt_outs", id: :serial, force: :cascade do |t|

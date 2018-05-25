@@ -1,44 +1,90 @@
-
-  <p id="notice"><%= notice %></p>
-
-  <div class="row col-12-s" id="freelancer-photog">
-  <!-- <strong>Picture:</strong> -->
-  <img src= '<%= @freelancer.picture %>' class="img-fluid" id="photog-image"></img> 
-</div>
-
-<div id="container">
-  <div id="freelancer-avatar">
-    <!-- <strong>Userpic:</strong> -->
-    <img src= '<%= @freelancer.userpic %>'id="userpic"></img>
+<div class="container">
+  <div class="row col-s-12">
+    <div class="" id="freelancer-photog">
+    <!-- <strong>Picture:</strong> -->
+      <img src= '<%= @freelancer.picture %>' class="img-fluid" id="photog-image"></img>
+    </div>
+    <div id="container">
+      <div class="row col-s-12" id="freelancer-avatar">
+        <!-- <strong>Userpic:</strong> -->
+        <img src= '<%= @freelancer.userpic %>'id="userpic"></img>
+      </div>
+    </div>
+  </div>
+  <div class="container mb-3" id="jumbo">
+    <div class="row col-s-12">
+      <div class="jumbotron jumbotron-fluid jumbotron-success">
+        <h2 class="display-3 text-center"><%= @freelancer.first_name %> <%= @freelancer.last_name %></h2>
+        <h1 class="">About Me:</h1>
+        <hr class="my-2">
+        <h5><%= @freelancer.bio %></h5>
+        <h1 class="mt-4 text-center">Location: <%= @freelancer.location %></h1>
+      </div>
+    </div>
+  </div>
+  <div class="container container" id="dumbo">
+    <div class="row col-s-12">
+      <div class="jumbotron jumbotron-fluid w-100">
+        <h4 class="display-4 text-center">Photography</h4>
+        <h3 class="title text-center">Genres:</h4>
+        <hr class="my-2">
+        <h4 class="text-center"><%= @freelancer.genre %></h1>
+      </div>
+    </div>
   </div>
 </div>
 
-<div id="freelancer-name">
-  <h3>
-   <!--  <strong>First name:</strong> -->
-    <%= @freelancer.first_name %>
-  </h3>
-
-  <h3>
-    <!-- <strong>Last name:</strong> -->
-    <%= @freelancer.last_name %>
-  </h3>
-</div>
-
-<div id= "bio">
-  <h5 id="aboutme">About Me:</h5>
-
-  <h6>
-    <%= @freelancer.bio %>
-  </h6>
-</div>
-
-<div id="location">
-    <!-- <strong>Location:</strong> -->
-    <p id="location-font">
-    <%= @freelancer.location %>
-  </p>
-</div>
-
-<div id="edit"><p id="edit-text"><%= link_to 'Edit', edit_freelancer_path(@freelancer) %></p></div>
 <!--   | <%= link_to 'Back', freelancers_path %> -->
+
+<!-- Button trigger modal -->
+<div class="container">
+<div class="row justify-content-between">
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#travelModal">
+  Set Travel Options
+</button>
+<button type="button" class="btn btn-success col-1 justify-content-end"> <%= link_to 'Edit', edit_freelancer_path(@freelancer) %></button>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="travelModal" tabindex="-1" role="dialog" aria-labelledby="travelModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Set your travel here</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= form_with(model: @freelancer, local: true) do |form| %>
+
+      <div class="field">
+        <%= form.label :destination %>
+        <%= form.text_field :destination %>
+      </div>
+
+      <div class="field">
+        <%= form.label :start_date %>
+        <%= form.text_field :start_date %>
+      </div>
+
+      <div class="field">
+        <%= form.label :end_date %>
+        <%= form.text_field :end_date %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+

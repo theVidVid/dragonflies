@@ -3,16 +3,21 @@ class FreelancersController < ApplicationController
 
   # GET /freelancers
   # GET /freelancers.json
+  #search pseudocode:
+  #   1. get all freelancers whose destination equals to search-location and within date range
+  #   2. get all freelancers whose location equals to search-location and destination is nill
+  #   3. get all freelancers whose location equals to search-location and destination is not nill outside date range
+  #   4. search just location if date input is empty
+
   def index
-    @freelancers = Freelancer.all
-    
-    if params[:search]
-      @freelancers = Freelancer.search(params[:search]).order("created_at DESC")
-    else
+    if params[:freelancer][:start_date].empty? && params[:freelancer][:end_date].empty?
+      @freelancers = Freelancer.where("location = :search",{search: params[:search]})
+    elsif params[:freelancer][:start_date].present? && params[:freelancer][:end_date].present?
+      @freelancers = Freelancer.where("(destination = :search AND start_date <= :start AND end_date >= :end) OR (location = :search AND destination IS NULL) OR (location = :search AND destination IS NOT NULL AND start_date >= :start AND end_date <= :end)",{search: params[:search], start: params[:freelancer][:start_date], end: params[:freelancer][:end_date]})
+    else 
       @freelancers = Freelancer.all.order("created_at DESC")
     end
-    puts "test"
-    puts @popular_places
+   
   end
 
   # GET /freelancers/1
@@ -32,6 +37,9 @@ class FreelancersController < ApplicationController
 
   # GET /freelancers/1/edit
   def edit
+  end
+
+  def travel
   end
 
   # POST /freelancers
@@ -82,6 +90,8 @@ class FreelancersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def freelancer_params
-      params.require(:freelancer).permit(:first_name, :last_name, :bio, :userpic, :picture, :user_id, :location)
+      
+      params.require(:freelancer).permit(:first_name, :last_name, :bio, :userpic, :picture, :user_id, :location, :genre, :destination, :start_date, :end_date)
+
     end
 end
