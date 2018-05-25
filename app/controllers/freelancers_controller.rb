@@ -10,10 +10,10 @@ class FreelancersController < ApplicationController
   #   4. search just location if date input is empty
 
   def index
-    if params[:freelancer][:start].empty? && params[:freelancer][:end].empty?
+    if params[:freelancer][:start_date].empty? && params[:freelancer][:end_date].empty?
       @freelancers = Freelancer.where("location = :search",{search: params[:search]})
-    elsif params[:freelancer][:start].present? && params[:freelancer][:end].present?
-      @freelancers = Freelancer.where("(destination = :search AND start_date <= :start AND end_date >= :end) OR (location = :search AND destination IS NULL) OR (location = :search AND destination IS NOT NULL AND start_date >= :start AND end_date <= :end)",{search: params[:search], start: params[:freelancer][:start], end: params[:freelancer][:end]})
+    elsif params[:freelancer][:start_date].present? && params[:freelancer][:end_date].present?
+      @freelancers = Freelancer.where("(destination = :search AND start_date <= :start AND end_date >= :end) OR (location = :search AND destination IS NULL) OR (location = :search AND destination IS NOT NULL AND start_date >= :start AND end_date <= :end)",{search: params[:search], start: params[:freelancer][:start_date], end: params[:freelancer][:end_date]})
     else 
       @freelancers = Freelancer.all.order("created_at DESC")
     end

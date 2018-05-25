@@ -1,25 +1,25 @@
 
-<div>
-  <p class="alert alert-success" id="notice" role="alert"><%= @message %></p>
-</div>
-<h1 class="header">Freelancers</h1>
+
 
 <div class="container justify-content-center mt-5" id="freelance-cards">
-  <div class="row col-12-sm text-center">
+<div class="row col-12-sm text-center justify-content-center" style="">
+<h1 class="header">Photographers in <%= params[:search] %></h1>
+</div>
+
+  <div class="row col-12-sm text-center justify-content-center card-deck" style="margin-bottom: 5rem;">
     <% @freelancers.each do |freelancer| %>
-      <div class="card" style="width: 35rem;">
+      <div class="card" style="width: 21rem;">
         <img class="card-img-top" src="<%= freelancer.picture %>" alt="Card image cap">
+        <div class="avatar">
+          <img alt="" src="<%= freelancer.userpic %>">
+        </div>
         <div class="card-body">
-          <h5 class="card-title card-dark"><%= freelancer.first_name %> <%= freelancer.last_name %></h5>
+          <h5 class="card-title card-dark"><%= link_to freelancer.first_name, freelancer %></h5>
           <p class="card-text"><%= freelancer.bio %></p>
         </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item"><%= freelancer.location %></li>
-            <li class="list-group-item"><%= freelancer.userpic %></li>
         </ul>
-        <div class="card-body">
-          <a class="card-link"><%= link_to 'Show', freelancer %></a>
-        </div>
       </div>
     <% end %>
   </div>
