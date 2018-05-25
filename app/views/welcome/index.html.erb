@@ -1,13 +1,10 @@
-<div>
-  <p class="alert alert-success" id="notice" role="alert"><%= notice %></p>
-</div>
 
-<h1 class="header mt-5">Find a photographer in your dream destination</h1>
-<div class="container justify-content-center mt-5">
-  <div class="row col-12-sm text-center">
+<div class="container justify-content-center">
+    <h1 class="header">Find a photographer in your dream destination</h1>
+  <div class="row col-12-sm text-center justify-content-center card-deck" style="margin-bottom: 5rem;">
     <% @popular_places.keys.each do |destination| %>
-      <div class="card" style="width: 35rem;">
-        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+      <div class="card" style="width: 21rem;">
+        <img class="card-img-top" src="<%= Freelancer.where("location = '#{destination}'").first.picture %>" alt="Card image cap">
         <div class="card-body">
           
           <a class="badge badge-info badge-sm" href="./locations/<%= destination %>"><h6 class="card-title card-dark"><%= destination %></h6></a>
