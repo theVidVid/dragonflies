@@ -12,5 +12,15 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
     end      
   end
-  
+
+  acts_as_messageable
+
+  #    def name
+  #   "User = #{id}"
+  # end
+
+    def mailboxer_email(object)
+ #return the model's email here
+  end
+
 end
