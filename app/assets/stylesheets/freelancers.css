@@ -1,9 +1,31 @@
-.avatar img{
-	border-radius: 50%;
-	border: 5px solid rgba(255,255,255,0.5);
-	height: 90px;
-	width: 90px;
+#photog-image {
+	height: 65vh;
+	width: 1500px;
 }
+
+#userpic {
+	height: 200px;
+	width: 180px;
+	z-index: 1;
+}
+
+#freelancer-avatar {
+	position: relative;
+	bottom: 75px;
+	left: 20%;
+}
+
+#jumbo {
+	position: relative;
+	margin: -18%;
+	margin-left: -1.25%;
+	width: 1145px;
+}
+
+#dumbo {
+	position:relative;
+}
+
 
 .avatar img{
 	position: relative;
@@ -21,46 +43,28 @@ h1.header {
     object-fit: cover;
 }
 
-#container {
-	width: 200px;
+.avatar img{
+	border-radius: 50%;
+	border: 5px solid rgba(255,255,255,0.5);
+	height: 90px;
+	width: 90px;
 }
+
+.container {
+	margin-top: 275px;
+}
+
+.card {
+	width: 30%;
+	margin: 10px 15px 10px 15px;
+} 
+
+
+/* 
 
 #freelance-photog {
 	height: 750px;
 	width: 1500px;
-}
-
-#photog-image {
-	height: 75vh;
-	width: 1500px;
-}
-
-#userpic {
-	height: 200px;
-	width: 180px;
-	z-index: 1;
-}
-
-#freelancer-avatar {
-	position: relative;
-	bottom: 75px;
-	left: 20%;
-}
-#jumbo {
-	position: relative;
-	margin: -18%;
-	margin-left: -1.25%;
-	width: 1145px;
-}
-#dumbo {
-	position:relative;
-}
-#freelancer-name {
-	display: inline-flex;
-	position: relative;
-	margin-top: 11%;
-	left: -16%;
-	color: black;
 }
 
 #location {
@@ -71,18 +75,6 @@ h1.header {
 	color: black;
 }
 
-#location-font {
-	font-size: 20px;
-	font-style: bold;
-}
-
-
-#bio {
-	display: block;
-	position: relative;
-	margin-left: 4%;
-	margin-top: 10%;
-}
 
 #edit {
 	position: relative;
@@ -102,11 +94,4 @@ h5 {
 	font-style: bold;
 }
 
-.container {
-	margin-top: 275px;
-}
-
-.card {
-	width: 30%;
-	margin: 10px 15px 10px 15px;
-}
+*/
