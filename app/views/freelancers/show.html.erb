@@ -1,3 +1,4 @@
+
 <div class="container col-s-12 mt-5">
   <div class="row col-s-12">
     <div class="" id="freelancer-photog">
@@ -11,7 +12,7 @@
       </div>
     </div>
   </div>
-  <div class="container mb-3" id="jumbo">
+  <div class="container" id="jumbo">
     <div class="row col-s-12">
       <div class="jumbotron jumbotron-fluid jumbotron-success">
         <h2 class="display-3 text-center"><%= @freelancer.first_name %> <%= @freelancer.last_name %></h2>
@@ -19,14 +20,7 @@
         <hr class="my-2">
         <h5><%= @freelancer.bio %></h5>
         <h1 class="mt-4 text-center">Location: <%= @freelancer.location %></h1>
-      </div>
-    </div>
-  </div>
-  <div class="container container" id="dumbo">
-    <div class="row col-s-12">
-      <div class="jumbotron jumbotron-fluid w-100">
-        <h4 class="display-4 text-center">Photography</h4>
-        <h3 class="title text-center">Genres:</h4>
+        <h3 class="title text-center">Genres:</h3>
         <hr class="my-2">
         <h4 class="text-center"><%= @freelancer.genre %></h1>
       </div>
