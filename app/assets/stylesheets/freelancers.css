@@ -105,3 +105,8 @@ h5 {
 .container {
 	margin-top: 275px;
 }
+
+.card {
+	width: 30%;
+	margin: 10px 15px 10px 15px;
+}
