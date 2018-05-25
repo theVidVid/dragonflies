@@ -1,9 +1,9 @@
-<div class="container"></div>
+<div class="container">
 <h1 class="header">Photographers in <%= params[:location] %></h1>
 
-<div class="row col-12-sm text-center justify-content-center card-deck" style="margin-bottom: 5rem;">
+<div class="row col-12-sm text-center justify-content-center" style="margin-bottom: 5rem;">
     <% @freelancers_from_location.each do |freelancer| %>
-      <div class="card" style="width: 21rem;">
+      <div class="card">
         <img class="card-img-top" src="<%= freelancer.picture %>" alt="Card image cap">
         <div class="avatar">
           <img alt="" src="<%= freelancer.userpic %>">

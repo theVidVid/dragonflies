@@ -1,15 +1,46 @@
-<div class="navbar card text-center bg-light">
-  <div class="card-body">
-    <h5 class="card-title">Travellancer</h5>
-    <p class="card-text">Empowering the gig economy<br>Anywhere.</p>
-    <% if user_signed_in? %>
+<footer class="page-footer font-small blue pt-4 mt-4 bg-light">
+  <div class="container-fluid text-center text-md-left">
+    <div class="row">
+      <div class="col-md-6 mt-md-0 mt-3">
+        <h5 class="text-uppercase">Travellancer</h5>
+        <p>Empowering the gig economy<br>Anywhere..</p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+
+        <% if user_signed_in? %>
+        <li><a href="/freelancers/<%= current_user.freelancer.id %>">Profile</a></li>
+        <li><%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "nav-link mb-6" %></li>
       
-      <% else %>
-        <a href="/users/sign_up" class="btn btn-primary btn-sm">Sign Up!</a>
-    <% end %>
-    
+        <% else %>
+          <li><a href="/users/sign_up">Sign Up!</a></li>
+          <li ><a href="/users/sign_in">Login</a></li>
+        <% end %>
+
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
   </div>
-  <div class="card-footer text-dark">
-    All rights reserved. 2018
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
   </div>
-</div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
