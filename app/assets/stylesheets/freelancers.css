@@ -22,60 +22,66 @@ h1.header {
 }
 
 #container {
-	width: 100px;
+	width: 200px;
 }
 
 #freelance-photog {
-	height: 250px;
-	width: 800px;
+	height: 750px;
+	width: 1500px;
 }
 
 #photog-image {
-	height: 100%;
-	max-width: auto;
+	height: 75vh;
+	width: 1500px;
 }
 
 #userpic {
 	height: 200px;
-	width: 200px;
+	width: 180px;
+	z-index: 1;
 }
 
 #freelancer-avatar {
 	position: relative;
 	bottom: 75px;
-	left: 45px;
+	left: 20%;
 }
-
+#jumbo {
+	position: relative;
+	margin: -18%;
+	margin-left: -1.25%;
+	width: 1145px;
+}
+#dumbo {
+	position:relative;
+}
 #freelancer-name {
 	display: inline-flex;
 	position: relative;
-	top: -160px;
-	left: 26%;
+	margin-top: 11%;
+	left: -16%;
 	color: black;
 }
 
 #location {
 	display: inline-flex;
 	position: relative;
-	top: -250.9px;
+	margin-top: -42%;
 	left: 59%;
 	color: black;
 }
 
 #location-font {
 	font-size: 20px;
+	font-style: bold;
 }
 
-#aboutme {
-	position: relative;
-	left: 21px;
-}
 
 #bio {
 	display: block;
 	position: relative;
-	margin-left: 44%;
-	bottom: 90px;
+	margin-left: 4%;
+	margin-top: 10%;
 }
 
 #edit {
@@ -84,14 +90,15 @@ h1.header {
 	bottom: 284.3px;
 }
 
-#edit-text {
-	font-size: 22px;
-}
+
 
 h3 {
 	margin: 3%;
+	font-style: bold;
 }
 
 h5 {
 	margin: 3%;
+	font-style: bold;
 }
+
