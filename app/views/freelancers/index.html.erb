@@ -6,9 +6,9 @@
 <h1 class="header">Photographers in <%= params[:search] %></h1>
 </div>
 
-  <div class="row col-12-sm text-center justify-content-center card-deck" style="margin-bottom: 5rem;">
+  <div class="row col-12-sm text-center justify-content-center" style="margin-bottom: 5rem;">
     <% @freelancers.each do |freelancer| %>
-      <div class="card" style="width: 21rem;">
+      <div class="card">
         <img class="card-img-top" src="<%= freelancer.picture %>" alt="Card image cap">
         <div class="avatar">
           <img alt="" src="<%= freelancer.userpic %>">
