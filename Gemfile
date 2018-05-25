@@ -23,6 +23,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-linkedin-oauth2'
 gem 'bootstrap'
 gem 'figaro'
+gem 'mailboxer'
 gem 'jquery-rails'
 
 # Use CoffeeScript for .coffee assets and views
