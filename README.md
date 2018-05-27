@@ -49,5 +49,6 @@ Travellancer is an app that allows freelance photographers the ability to find s
 * Google Geo-location API: https://developers.google.com/maps/documentation/geolocation/intro
 
 # Credits
+* https://github.com/olgaboiar
 * https://github.com/NadiaBCarmon
 * https://github.com/theVidVid
