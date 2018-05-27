@@ -2,10 +2,6 @@
   <p align="center">
     <img src="https://i.imgur.com/pBHWiL5.png"><hr>
   </p>
-  <div align="center">
-  <h2 align="center">Home Page</h2>
-    <a href="https://imgur.com/lm9oKh2"><img src="https://i.imgur.com/lm9oKh2.png" title="source: imgur.com" /></a>
-  </div>
 </html>
 
 # Travelancer
@@ -28,7 +24,11 @@ Travellancer is an app that allows freelance photographers the ability to find s
 # Tech/framework used
 
 # Screenshots
-
+ <h2 align="center">Home Page</h2>
+ <a href="https://imgur.com/lm9oKh2"><img src="https://i.imgur.com/lm9oKh2.png" title="source: imgur.com" /></a>
+ <h2 align="center">Google Auto-Complete in location search</h2>
+ <a href="https://imgur.com/GWTMZA5"><img src="https://i.imgur.com/GWTMZA5.png" title="source: imgur.com" /></a>
+ 
 # API Reference
 * Google Geo-location API: https://developers.google.com/maps/documentation/geolocation/intro
 
