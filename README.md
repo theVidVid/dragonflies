@@ -16,7 +16,7 @@ Travellancer is an app that allows freelance photographers the ability to find s
 # Basic Functionality:
 * Log-in authentication with Devise
 * LinkedIn and Facebook Log-in authentication with Omni-Auth and o-auth2
-* Google autocomplete for location
+* Google autocomplete for location search
 * In-app messaging with Mailboxer
 
 # Features
