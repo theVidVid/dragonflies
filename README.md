@@ -9,7 +9,7 @@
 </html>
 
 # Travelancer
-Travellancer is an app that allows freelance photographers the ability to find short term work while traveling to new destinations or at their local city of residence. They can do this by posting their dates of availability; which are then both viewable and search-able by potential clients looking for candidates like them.
+Travellancer is an app that allows freelance photographers the ability to find short term work while traveling to new destinations or at their local city of residence. They can do this by posting their dates of availability; which are then both viewable and search-able by potential clients.
 
 # Built With:
 * Ruby-on-Rails
@@ -19,8 +19,19 @@ Travellancer is an app that allows freelance photographers the ability to find s
 
 # Basic Functionality:
 * Log-in authentication with Devise
-* LinkedIn log-in authentication with Omni-Auth
+* LinkedIn and Facebook Log-in authentication with Omni-Auth and o-auth2
 * Google autocomplete for location
-* In-app messaging
+* In-app messaging with Mailboxer
 
+# Features
 
+# Tech/framework used
+
+# Screenshots
+
+# API Reference
+* Google Geo-location API: https://developers.google.com/maps/documentation/geolocation/intro
+
+# Credits
+* https://github.com/NadiaBCarmon
+* https://github.com/theVidVid
