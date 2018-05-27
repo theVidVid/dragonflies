@@ -1,8 +1,8 @@
-<html>
+
   <p align="center">
     <img src="https://i.imgur.com/pBHWiL5.png"><hr>
   </p>
-</html>
+
 
 # Travelancer
 Travellancer is an app that allows freelance photographers the ability to find short term work while traveling to new destinations or at their local city of residence. They can do this by posting their dates of availability; which are then both viewable and search-able by potential clients.
@@ -17,12 +17,14 @@ Travellancer is an app that allows freelance photographers the ability to find s
 
 # Basic Functionality:
 * Log-in authentication with Devise
-* LinkedIn and Facebook Log-in authentication with Omni-Auth and o-auth2
-* Google autocomplete for location search
-* In-app messaging with Mailboxer
+* Freelance photgrapher can create an account with a short bio, featured photo, profile pic, location, and photography genre.
 
 # Features
-* 
+* LinkedIn and Facebook Log-in authentication with Omni-Auth and o-auth2
+* Top 6 locations present at any given time based on most popular sites
+* Photographer can set travel dates that can become searchable by other photographers or visitors interested in contacting that photographer.
+* In-app messaging provided by Mailboxer, alows registered photographers to communicate with other photograpers or with potential clients.
+* Google autocomplete for location search
 
 # Screenshots
  <h2 align="center">Home Page</h2>
@@ -31,6 +33,7 @@ Travellancer is an app that allows freelance photographers the ability to find s
  
  <h2 align="center">Google Auto-Complete in location search</h2>
  <a href="https://imgur.com/GWTMZA5"><img src="https://i.imgur.com/GWTMZA5.png" title="source: imgur.com" /></a>
+ 
  
  <h2 align="center">LinkedIn Log-in Authentication</h2>
  <div align="center">
